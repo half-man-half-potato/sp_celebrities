@@ -11,6 +11,7 @@ df = df.dropna(subset=["person_name"])
 
 # Create the Dash app
 app = Dash(__name__)
+server = app.server
 
 # Layout
 app.layout = html.Div([
@@ -73,3 +74,4 @@ def update_chart(selected_seasons):
 
 if __name__ == "__main__":
     app.run(debug=True)
+
